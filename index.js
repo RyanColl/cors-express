@@ -4,8 +4,8 @@ var app = express()
 const PORT = process.env.PORT | 8080
 app.use(cors())
 
-app.get('/8080', function (req, res, next) {
-  res.json({msg: 'This is CORS-enabled for all origins!'})
+app.post('/8080', function (req, res, next) {
+  res.json({msg: req.body})
 })
 
 app.listen(PORT, function () {
