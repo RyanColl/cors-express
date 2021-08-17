@@ -1,10 +1,10 @@
-import express from 'express'
-import cors from 'cors'
+var express = require('express')
+var cors = require('cors')
 var app = express()
 const PORT = process.env.PORT | 80
 app.use(cors())
 
-app.get('/products/:id', function (req, res, next) {
+app.get('/', function (req, res, next) {
   res.json({msg: 'This is CORS-enabled for all origins!'})
 })
 
