@@ -1,7 +1,7 @@
 var express = require('express')
 var cors = require('cors')
 var app = express()
-const PORT = process.env.PORT | 8081
+const PORT = 80
 app.use(cors())
 
 app.get('/', function (req, res, next) {
